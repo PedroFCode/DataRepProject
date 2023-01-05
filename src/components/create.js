@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 export class Create extends React.Component {
-
+//constructor to bind the events to each method in order for the methods to function
     constructor(){
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,6 +22,7 @@ export class Create extends React.Component {
         }
     }
 
+    //Takes an event when envoked
     handleSubmit(e){
         e.preventDefault();
         console.log(`Button clicked 
@@ -52,6 +53,7 @@ export class Create extends React.Component {
         })
     }
 
+    //Is called when value changes applies to all onChange methods
     onChangeGameTitle(e){
         this.setState({
             title:e.target.value
@@ -78,6 +80,7 @@ export class Create extends React.Component {
         })
     }
 
+    //html code, creates input fields for adding a new game
     render() {
         return (
             <div>

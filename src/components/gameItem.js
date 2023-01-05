@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export class GameItem extends React.Component {
+    //Constructors binds delete event to function
     constructor(){
         super();
         this.DeleteGame = this.DeleteGame.bind(this);
@@ -16,6 +17,7 @@ export class GameItem extends React.Component {
         .then((res)=>{this.props.Reload();})
         .catch();
     }
+    //HTML code, displays all games in the database
     render() {
         return (
             <div>

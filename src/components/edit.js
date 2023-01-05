@@ -10,6 +10,7 @@ export function Edit(){
     const [genre, setGenre] = useState('');
     const [desc, setDesc] = useState('');
 
+    //Gets the games in the database by their ID
     useEffect(()=>{
         axios.get('http://localhost:4000/api/game/'+id)
         .then((response)=>{
@@ -22,6 +23,7 @@ export function Edit(){
         .catch()
     },[]);
 
+    //Updates the game found by ID
     const handleSubmit = (e)=>{
         e.preventDefault();
 
@@ -38,6 +40,7 @@ export function Edit(){
         .catch();
     }
 
+    //html code, uses input fields to update a game
     return(
         <div>
             <h3>Edit Game</h3>
